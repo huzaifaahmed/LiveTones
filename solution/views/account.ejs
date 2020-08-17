@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<% const title = global.page_titles[page] %>
+<% include ../views/templates/head %>
+
+<body>
+    <div id="app">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <% include ../views/templates/header %>
+            <% include ../views/templates/nav %>
+            <main class="mdl-layout__content mat-typography">
+                <!-- List items with avatar and action -->
+                <style>
+                    .demo-list-action {
+                        width: 300px;
+                    }
+
+                </style>
+
+                <div class="demo-list-action mdl-list">
+                    <div class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons">email</i>
+                            <span>Emal:</span>
+                            <span id="name"><%= process.env.USERNAME %> </span>
+                        </span>
+                    </div>
+                    <div class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons">face</i>
+                            <span>Name:</span>
+                            <span id="email"><%= process.env.EMAIL %></span>
+                        </span>
+                    </div>
+                    <div class="mdl-list__item">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons">event</i>
+                            <span>Created on:</span>
+                            <span id="date"></span>
+                        </span>
+                        </span>
+                    </div>
+                </div>
+                <h3>Your posts:</h3>
+                <div id="posts"></div>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="/js/account.js"></script>
+
+</html>

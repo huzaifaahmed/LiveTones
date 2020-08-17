@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<% const title = global.page_titles[page] %>
+<% include ../views/templates/head %>
+
+<div class="container">
+    <div class="card"></div>
+    <div class="card">
+        <h4 class="name">Wired Festivals</h4>
+        <h1 class="title">Login</h1>
+        <form>
+            <div class="input-container">
+                <input type="text" id="email1" required="required" />
+                <label>Email</label>
+                <div class="bar"></div>
+            </div>
+            <div class="input-container">
+                <input type="password" id="pswd1" required="required" />
+                <label>Password</label>
+                <div class="bar"></div>
+            </div>
+            <div class="button-container">
+                <button type="button" id="login-btn"><span>Go</span></button>
+            </div>
+            <div class="footer">Share your moments!</div>
+        </form>
+    </div>
+    <div class="card alt">
+        <div class="toggle"></div>
+        <h1 class="title">Register
+            <div class="close"></div>
+        </h1>
+        <form>
+            <div class="input-container">
+                <input type="text" id="email2" required="required" />
+                <label>Email</label>
+                <div class="bar"></div>
+            </div>
+            <div class="input-container">
+                <input type="text" id="name" required="required" />
+                <label>Username</label>
+                <div class="bar"></div>
+            </div>
+            <div class="input-container">
+                <input type="password" id="pswd2" required="required" />
+                <label>Password</label>
+                <div class="bar"></div>
+            </div>
+            <div class="button-container">
+                <button type="button" id="register-btn"><span>Go</span></button>
+            </div>
+        </form>
+    </div>
+</div>
+
+</html>

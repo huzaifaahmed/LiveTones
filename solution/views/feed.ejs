@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<% const title = global.page_titles[page] %>
+<% include ../views/templates/head %>
+
+<body>
+    <div id="app">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <% include ../views/templates/header %>
+            <% include ../views/templates/nav %>
+            <main class="mdl-layout__content mat-typography">
+                <div id="posts"></div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

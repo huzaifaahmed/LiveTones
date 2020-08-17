@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body onload="initCam()">
+
+  <video id="player" style="display:none;" controls autoplay></video>
+  <img src='' style="display:none;">
+  <canvas style="display:none;"></canvas>
+  <canvas id="photo_canvas" width=640 height=360></canvas>
+
+  <!-- <select id="select_cam">
+    <option>Choose a camera</option>
+  </select> -->
+  <form id=“xForm" onsubmit="onSubmit()">
+    <label for='firstname'>First name:</label>
+    <input type="text" name="firstname" id="firstname" value="Mickey">
+    <p><label for='lastname'>Last name:</label>
+      <input type="text" name="lastname" id="lastname" value="Mouse">
+    </p>
+    <p><label for='year'>Year of Birth:</label>
+      <input type="number" name="year" id="year" value="1900">
+    </p>
+    <p><input type="submit" name="g" value="Submit" id="g"></p>
+  </form>
+
+  <button id="camera"><%= camera_button %></button>
+  <button id="capture"><%= capture_button %></button>
+  <button id="send"><%= send_button %></button>
+
+  <script src="/jquery/jquery.min.js"></script>
+  <script src="/js/camera.js"></script>
+
+</body>
+
+</html>

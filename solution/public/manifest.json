@@ -1,0 +1,26 @@
+{
+  "name": "Wired Festivals - PWA",
+  "description": "COM 3504 Project",
+  "short_name": "Wired",
+  "icons": [
+      {
+          "src": "/images/icons/camera-icon-192.png",
+          "type": "image/png",
+          "size": "192x192"
+      },
+      {
+          "src": "/images/icons/camera-icon-512.png",
+          "type": "image/png",
+          "size": "512x512"
+      }
+  ],
+  "start_url": "/",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#3f51b5",
+  "dir": "ltr",
+  "lang": "eng-UK",
+  "prefer_related_applications": false
+}

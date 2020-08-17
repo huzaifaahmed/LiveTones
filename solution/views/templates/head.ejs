@@ -1,0 +1,79 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title %> | Festivals</title>
+
+    <!--Favicons-->
+    <link rel="manifest" href="/manifest.json">
+
+    <!--CSS-->
+    <!-- <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="/selectize/css/selectize.bootstrap3.css" /> -->
+    <link rel="stylesheet" href="/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel='stylesheet' href='/material/material.blue-pink.min.css' />
+    <link rel='stylesheet' href='/leaflet/leaflet.css' />
+    <link rel='stylesheet' href='/leaflet/leaflet-search.min.css' />
+    <link rel='stylesheet' href='/css/main.css' />
+
+    <!-- JS -->
+    <!-- JavaScript library -->
+    <script type="text/javascript" src="/jquery/jquery.min.js"></script>
+    <!-- mobile-friendly interactive maps -->
+    <script type="text/javascript" src='/leaflet/leaflet.js'></script>
+    <script type="text/javascript" src='/leaflet/leaflet-search.src.js'></script>
+    <!-- jQuery-based custom <select> UI control -->
+    <!-- <script type="text/javascript" src="/selectize/js/standalone/selectize.min.js"></script> -->
+    <!-- front-end framework -->
+    <!-- <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script> -->
+    <!-- Material Design components in vanilla CSS, JS, and HTML -->
+    <script type="text/javascript" src="/material/material.min.js"></script>
+    <!-- position poppers in web applications -->
+    <!-- <script type="text/javascript" src="/popper.js/popper.min.js"></script> -->
+    <!-- date library (daterangepicker)  -->
+    <script type="text/javascript" src="/daterangepicker/moment.min.js"></script>
+    <!-- date range picker -->
+    <script type="text/javascript" src="/daterangepicker/daterangepicker.js"></script>
+
+    <!-- local -->
+    <script src="/js/idb.js"></script>
+    <script src="/js/database.js"></script>
+    <script src="/js/utility.js"></script>
+    <script src="/js/app.js"></script>
+    <!-- <script src="/js/maps.js"></script> -->
+
+    <% if (page == '/') { %>
+        <script src="/js/index.js"></script>
+    <% } %>
+
+    <% if (page == '/feed') { %>
+    <link rel="stylesheet" href="/css/feed.css">
+    <script src="/js/feed.js"></script>
+    <% } %>
+
+    <% if (page == '/account') { %>
+        <!-- <script src="/js/account.js"></script> -->
+    <!-- <style media="screen">
+        #camera.withphoto {
+            color: transparent !important;
+            background-size: cover;
+        }
+
+    </style>
+    <script src="/js/camera.js"></script>
+    <script src="/js/post.js"></script> -->
+    <% } %>
+
+
+    <% if (page == '/login' || page == '/regiter' || process.env.LOGIN == '/login') { %>
+        <% } %>
+    <!-- hash passwords -->
+    <link rel='stylesheet' href='/css/login.css' />
+    <script type="text/javascript" src="/bcryptjs/bcrypt.min.js"></script>
+    <script src="/js/user.js"></script>
+
+</head>

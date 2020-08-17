@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+    var posts_json = <%- JSON.stringify(posts) %>
+        console.log(posts_json)
+    var festivals_json = <%- JSON.stringify(festivals) %>
+        console.log(festivals_json)
+</script>
+
+<% include ../views/templates/head %>
+
+
+<body onload="initApp();initIndexDB();">
+    <div id="app">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <% include ../views/templates/header %>
+            <% include ../views/templates/nav %>
+            <main class="mdl-layout__content mat-typography">
+
+
+                <h1>Wired Festivals</h1>
+                <p>Find what events are happing around you.</p>
+                <div class="page-content">
+                    <h5 class="text-center mdl-color-text--primary">Share your Moments!</h5>
+                    <div id="shared-moments"></div>
+                </div>
+                <!-- Simple Textfield -->
+                <form action="#">
+
+                    <i class="material-icons">search</i>
+                    <div class="mdl-textfield mdl-js-textfield">
+
+                        <input class="mdl-textfield__input" type="text" id="sample1">
+                        <label class="mdl-textfield__label" for="sample1">Search events...</label>
+                    </div>
+                    <input type="text" name="birthday" value="05/30/2019" />
+                </form>
+
+                <div id="post-it">
+                    <b>Search values:</b><br />
+                    aquamarine, black, blue, cyan, darkblue, darkred, darkgray, dodgerblue, gray, green, red, skyblue,
+                    yellow, white ...
+                </div>
+                <div id="map"></div>
+
+                <div class="floating-button">
+                    <!-- Colored FAB button with ripple -->
+                    <button id="demo-menu-top-right"
+                        class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect">
+                        <i class="material-icons">add</i>
+                    </button>
+                    <ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+                        data-mdl-for="demo-menu-top-right">
+                        <a href="createevent">
+                            <li class="mdl-menu__item" onclick=""><i class="material-icons">add</i>Create Event</li>
+                        </a>
+                        <a href="createpost">
+                            <li class="mdl-menu__item" onclick=""><i class="material-icons">add</i>Create Post</li>
+                        </a>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+<script src="/js/maps.js"></script>
+<script src="/js/search.js"></script>
+
+</html>

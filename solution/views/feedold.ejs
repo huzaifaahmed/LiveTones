@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ../views/templates/head %>
+
+<body>
+
+    <!-- Nav Header -->
+    <header class="navbar sticky-top navbar-expand bg-primary navbar-dark">
+        <!-- Logo -->
+        <img src="images/icons/camera-icon-512.png" alt="Posts" width="60" class="img-fluid navbar-brand">
+
+        <div id="update" class="ml-auto">
+            <a class="icon" href="#update"><img width="25" src="images/flame.png"></a>
+            <img class="icon d-none spinner" width="20" src="images/sync.png">
+        </div>
+
+    </header>
+
+    <!-- Main Conatainer -->
+    <main class="container p-1">
+        <h1><%= title %></h1>
+        <h1><%= process.env.USERNAME %></h1>
+        <!-- Error Alert -->
+        <div class="alert alert-danger text-center m-1" style="display:none;">
+            Could not update.
+        </div>
+
+        <!-- posts -->
+        <div id="feed" class="row no-gutters"></div>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+<header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title"><%= title %></span>
+        <div class="mdl-layout-spacer"></div>
+        <!-- Colored raised button -->
+        <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+            <i class="material-icons">person</i>
+            <%= process.env.USERNAME %>
+        </button>
+
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+            <li class="mdl-menu__item" onclick='account()'><i class="material-icons">build</i> Account</li>
+            <li class="mdl-menu__item" onclick='logout()'><i class="material-icons">power_settings_new</i> Logout</li>
+        </ul>
+    </div>
+</header>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<% const title = global.page_titles[page] %>
+<% include ../views/templates/head %>
+
+<!DOCTYPE html>
+<html>
+
+<% include ../views/templates/head %>
+<link href="/css/forms.css" rel="stylesheet">
+
+
+<body onload="initApp()">
+    <div id="app">
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <% include ../views/templates/header %>
+            <% include ../views/templates/nav %>
+            <main class="mdl-layout__content mat-typography">
+
+                <h2>Create Posts</h2>
+
+                <div class="container">
+                    <form>
+
+                        <div class="form-group">
+                            <input type="text" required="required" />
+                            <label for="input" class="control-label">Name of the Event</label><i class="bar"></i>
+                        </div>
+                        <div class="form-group">
+                            <textarea required="required"></textarea>
+                            <label for="textarea" class="control-label">Comments</label><i class="bar"></i>
+                        </div>
+                        <div class="file_input_div">
+                            <div class="file_input">
+                                <label
+                                    class="image_input_button mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-button--colored">
+                                    <i class="material-icons">file upload</i>
+                                    <input id="file_input_file" class="none" type="file" />
+                                </label>
+                            </div>
+                            <div id="file_input_text_div" class="mdl-textfield mdl-js-textfield textfield-demo">
+                                <input class="file_input_text mdl-textfield__input" type="text" disabled readonly
+                                    id="file_input_text" />
+                                <label class="mdl-textfield__label" for="file_input_text"></label>
+                            </div>
+                        </div>
+
+                    </form>
+                    <div class="button-container">
+                        <button type="submit" class="button"><span>Submit</span></button>
+                    </div>
+                </div>
+
+</html>
